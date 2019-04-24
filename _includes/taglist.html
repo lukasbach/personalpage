@@ -1,0 +1,12 @@
+<div class="post-tags">
+    {% for cat in include.contentcontainer.categories %}
+    <div class="category" onClick="websearch('cat:{{cat}}')">
+        <i class="fa fa-folder" aria-hidden="true"></i> {{cat}}
+    </div>
+    {% endfor %}
+    {% for tag in include.contentcontainer.tags %}
+    <div class="tag" onClick="websearch('#{{tag}}')">
+        <i class="fa fa-hashtag" aria-hidden="true"></i>{{tag}}
+    </div>
+    {% endfor %}
+</div>

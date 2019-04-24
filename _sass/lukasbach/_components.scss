@@ -1,0 +1,145 @@
+.dark-bg a:not(.nostyle) {
+  color: $brand-color;
+  text-decoration: none;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  border-bottom: 1px solid $brand-color;
+
+  &:hover {
+    color: white;
+    background: $brand-color;
+  }
+  &:active {
+    background: $brand-color-dark;
+    border-color: $brand-color-dark;
+  }
+}
+
+figure {
+  line-height: 1;
+  margin: 0;
+
+  image, a {
+    margin-bottom: 0;
+  }
+
+  figcaption {
+    text-align: right;
+    @include relative-font-size(1);
+  }
+
+  margin-bottom: .3 * $spacing-unit;
+}
+
+.btn {
+  padding: .4 * $spacing-unit .8 * $spacing-unit;
+
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: -.05 * $base-font-size;
+  //word-spacing: -5px;
+
+  border: none;
+  cursor: pointer;
+
+  &.default {
+    background-color: $brand-color-dark;
+    color: white;
+    border-color: darken($brand-color-dark, 10%) !important;
+
+    &:hover {
+      background-color: darken($brand-color-dark, 15%);
+      color: $grey-color-light;
+      border-color: darken($brand-color-dark, 20%) !important;
+    }
+    &:active {
+      background-color: darken($brand-color-dark, 17%);
+      color: $grey-color-light;
+      border-color: darken($brand-color-dark, 22%) !important;
+    }
+  }
+
+  &.light {
+    background-color: white;
+    color: $grey-color-dark;
+    border-color: $brand-color !important;
+
+    &:hover {
+      background-color: $brand-color;
+      color: $grey-color-light;
+      border-color: $brand-color-dark !important;
+
+      //background-color: $brand-alt-color;
+      //color: $grey-color-light;
+      //border-color: $brand-alt-color-dark !important;
+    }
+
+    &:active {
+      background-color: lighten($brand-color, 5%);
+      color: $grey-color-light;
+      border-color: lighten($brand-color-dark, 5%) !important;
+    }
+  }
+
+  &.right {
+    border-right: .2 * $spacing-unit solid $brand-color;
+  }
+  &.bottom {
+    border-bottom: .2 * $spacing-unit solid $brand-color;
+  }
+}
+
+.listbtn {
+  background-color: darken($brand-alt-color, 10%);
+  color: $grey-color-light !important;
+  text-decoration: none !important;
+  display: flex;
+  @include relative-font-size(.8);
+  cursor: pointer;
+
+  a, a:hover, a:active {
+    color: $grey-color-light !important;
+    text-decoration: none !important;
+  }
+
+  &:not(:hover) {
+    .text .alt1 {display: block;}
+    .text .alt2 {display: none;}
+  }
+  &:hover {
+    .text .alt1 {display: none;}
+    .text .alt2 {display: block;}
+  }
+
+  &:hover {
+    background-color: $brand-color !important;
+  }
+}
+.listbtn:nth-child(even) {
+  background-color: darken($brand-alt-color, 7%);
+}
+
+.listbtn-col {
+  padding: .2 * $spacing-unit;
+}
+
+.listbtn-col.icon {
+  padding-left: .4 * $spacing-unit;
+}
+
+.listbtn-col.text {
+  flex-grow: 1;
+}
+
+.emptyfornow {
+  @include relative-font-size(2);
+  color: $brand-alt-color-light;
+
+  small {
+    @include relative-font-size(1);
+  }
+
+  p {
+    margin: 0 !important;
+  }
+}

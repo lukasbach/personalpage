@@ -1,0 +1,8 @@
+{% for page in include.collection %}
+<a href="{{ page.url | relative_url }}">
+    <div class="blogentry-preview">
+        <div class="blogentry-preview-head">{{ page.title | escape }}</div>
+        <div class="blogentry-preview-description">{{ page.excerpt | strip_html }}</div>
+    </div>
+</a>
+{% endfor %}

@@ -1,0 +1,83 @@
+.post, .page {
+  width: 24 * $spacing-unit;
+  color: white;
+
+  font-size: 1.4 * $base-font-size;
+  line-height: 1.2 * $base-line-height;
+  font-weight: 100;
+  text-align: justify;
+  color: $grey-color-light;
+
+  .highlight {
+    padding: .3 * $spacing-unit $spacing-unit;
+  }
+  .highlight, .highlight pre, .highlight code { //}, .highlight figure, .highlight figure pre .highlight figure pre code {
+    background-color: darken($bg-color-dark, 4%) !important;
+    @include relative-font-size(1);
+  }
+  .MathJax_Preview, .MathJax {
+    color: $grey-color-light !important;
+  }
+}
+
+@media screen and (max-width: 35 * $spacing-unit) {
+  .post, .page {
+    width: 18 * $spacing-unit;
+    width: 100%;
+  }
+}
+
+.post-head, .page-head, .post-head h1, .page-head h1 {
+  font-size: 2.4 * $base-font-size !important;
+  color: white;
+  font-weight: 600;
+  margin-bottom: $spacing-unit;
+
+  .post-meta {
+    display: none;
+  }
+}
+.post-content {
+}
+
+.post-tags {
+  margin-top: $spacing-unit;
+  text-align: left;
+}
+
+.category, .tag {
+  display: inline-block;
+  padding: .1 * $spacing-unit .3 * $spacing-unit;
+  @include relative-font-size(.85);
+  @include dontselect();
+  font-weight: bold;
+  margin-bottom: .2 * $spacing-unit;
+}
+
+.dark-bg .category {
+  background-color: $brand-color;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background-color: white;
+    color: $grey-color-dark;
+  }
+  &:active {
+    background: $grey-color;
+    color: $grey-color-dark;
+  }
+}
+
+.dark-bg .tag {
+  background-color: $brand-color-dark;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background-color: white;
+    color: $grey-color-dark;
+  }
+  &:active {
+    background: $grey-color;
+    color: $grey-color-dark;
+  }
+}

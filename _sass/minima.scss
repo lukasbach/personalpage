@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+$base-font-family: "Roboto", Arial, sans-serif !default;
+$base-font-size:   1*16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+//$text-color:       #111 !default;
+//$background-color: #fdfdfd !default;
+//$brand-color:      #2a7ae2 !default;
+
+$grey-color:            #828282 !default;
+$grey-color-light:      lighten($grey-color, 40%) !default;
+$grey-color-dark:       darken($grey-color, 25%) !default;
+
+$brand-color:           #3498db;
+$brand-color-dark:      darken($brand-color, 20%);
+$brand-color-light:     lighten($brand-color, 20%);
+
+$brand-alt-color:       darken(#34495e, 10%);
+$brand-alt-color-dark:  darken($brand-alt-color, 4%);
+$brand-alt-color-light: lighten($brand-alt-color, 20%);
+
+$bg-color-light:        darken(#fff, 18%);
+$bg-color-dark:         $brand-alt-color;
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+@mixin dontselect() {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}
+
+// Import partials.
+@import
+"lukasbach/base.scss",
+"lukasbach/_components.scss",
+"lukasbach/_navbar.scss",
+"lukasbach/_pagelist.scss",
+"lukasbach/_post.scss",
+"highlighters/monokai.scss"//,
+//"lightbox/lightbox"
+;

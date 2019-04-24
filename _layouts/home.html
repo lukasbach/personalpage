@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<!--<div class="emptyfornow">
+    <p>No blog entries here yet!</p>
+</div>-->
+
+{% for post in site.posts %}
+<a href="{{ post.url | relative_url }}">
+    <div class="blogentry-preview">
+        <div class="blogentry-preview-head">{{ post.title | escape }}</div>
+        <div class="blogentry-preview-description">{{ post.excerpt  }}</div>
+    </div>
+</a>
+{% endfor %}

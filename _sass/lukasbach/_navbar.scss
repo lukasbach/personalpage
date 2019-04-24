@@ -1,0 +1,106 @@
+.menu {
+  width: 6.3 * $spacing-unit;
+  background-color: $bg-color-light;
+  min-height: 100%;
+  padding: $spacing-unit;
+
+  @include dontselect();
+
+  .lukasbach {
+    display: block !important;
+    font-size: 2 * $base-font-size;
+    padding: 10px 20px;
+    margin-bottom: $spacing-unit;
+    cursor: default;
+  }
+}
+
+.lukasbach {
+  display: inline-block;
+
+  background: $bg-color-dark;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  line-height: $base-line-height;
+  text-align: center;
+
+  .lukas {
+    color: #ffffff;
+  }
+  .bach {
+    color: $brand-color;
+  }
+}
+
+
+.navlink {
+  display: block;
+  text-decoration: none;
+  color: black;
+
+  background-color: white;
+  padding: .6 * $spacing-unit;
+  margin-bottom: .2 * $spacing-unit;
+
+  &:hover {
+    background-color: $brand-color;
+  }
+
+  &:active {
+    background-color: lighten($brand-color, 10%);
+  }
+
+  &:hover .navlink-head {
+    color: white;
+  }
+
+  &:hover .navlink-description {
+    color: lighten($brand-color, 30%);
+  }
+}
+
+.navlink-head {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: $base-font-size;
+}
+
+.navlink-description {
+  font-size: .85 * $base-font-size;
+  color: $grey-color;
+}
+
+@media screen and (max-height: $spacing-unit * 24) {
+  .navlink-description {
+    display: none;
+  }
+}
+
+.nav-connect a {
+  font-size: 1.6 * $base-font-size;
+  color: $grey-color;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: lighten($grey-color, 5%);
+  }
+  &:active {
+    color: lighten($grey-color, 10%);
+  }
+}
+
+
+.websearch {
+
+  &:hover, &:active {
+    background-color: white !important;
+  }
+}
+
+.websearch-input {
+  display: inline-block;
+  border: none;
+  width: 80%;
+  margin-left: 5px;
+}

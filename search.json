@@ -1,0 +1,20 @@
+---
+layout: null
+---
+
+[
+
+{% for entity in site.documents %}
+
+  {
+  "title"    : "{{ entity.title | escape }}",
+  "category" : "{{ entity.category }}",
+  "tags"     : "{{ entity.tags | join: ', ' }}",
+  "url"      : "{{ entity.baseurl }}{{ entity.url }}",
+  "date"     : "{{ entity.date }}",
+  "excerpt"  : "{{ entity.excerpt | strip_html | strip_newlines }}"
+  }{% unless forloop.last %},{% endunless %}
+
+{% endfor %}
+
+]

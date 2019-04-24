@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    <div class="webcontainer">
+        <nav class="menu light-bg">
+
+            <div class="lukasbach"><span class="lukas">lukas</span><span class="bach">bach</span></div>
+
+            <div class="navlink websearch">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input class="websearch-input" type="text" placeholder="Search content..."
+                       autocomplete="off" spellcheck="false" tabindex="1">
+            </div>
+
+            <a href="{{ "/" | relative_url }}" class="navlink">
+                <div class="navlink-head">home</div>
+                <div class="navlink-description">An Overview over all blog entries.</div>
+            </a>
+            <a href="{{ "/aboutme" | relative_url }}" class="navlink">
+                <div class="navlink-head">about me</div>
+                <div class="navlink-description">Who I am, what I'm doing.</div>
+            </a>
+            <a href="{{ "/current" | relative_url }}" class="navlink">
+                <div class="navlink-head">current projects</div>
+                <div class="navlink-description">Projects I'm currently working on or which I've finished.</div>
+            </a>
+            <a href="{{ "/legacy" | relative_url }}" class="navlink">
+                <div class="navlink-head">legacy projects</div>
+                <div class="navlink-description">Junkeyard of projects.</div>
+            </a>
+            <a href="{{ "/edu" | relative_url }}" class="navlink">
+                <div class="navlink-head">educational</div>
+                <div class="navlink-description">Various things regarding my university (german).</div>
+            </a>
+
+            {% include social-icons.html %}
+
+        </nav>
+        <main class="content dark-bg">
+
+            {{ content }}
+
+        </main>
+    </div>
+
+
+  </body>
+
+</html>

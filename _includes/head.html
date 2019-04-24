@@ -1,0 +1,33 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Lukas Bach">
+    <meta name="publisher" content="Lukas Bach">
+    <meta name="copyright" content="Lukas Bach">
+    <meta name="description" content="Web and Software developement. I'm studying computer science at KIT in Germany, Karlsruhe, on this webpage I'm publishing various documents, programs and scripts I've written, hoping they will help others.">
+    <meta name="keywords" content="web, software, developement, entwicklung, html, html5, css, scss, php, js, ts, javascript, typescript, KIT, karlsruhe, informatik, informatics, computer, science, it, programming, grundbegriffe, der, informatik, softwaretechnik, lineare, algebra, examstats, filenode, free, open, source">
+    <meta name="page-topic" content="Computer Science">
+    <meta name="page-type" content="private home page">
+    <meta name="audience" content="Anfänger, Azubis, Experten, Fortgeschrittene, Profis, Schüler, Studenten"><meta name="robots" content="index, follow">
+
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,600" rel="stylesheet">
+    <script src="{{ "/assets/js/jquery-1.11.0.min.js" | relative_url }}"></script>
+    <script src="https://use.fontawesome.com/fefb573f71.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script src="{{ "/assets/js/search.js" | relative_url }}"></script>
+
+    <!--<script src="{{ "/assets/js/lightbox.min.js" | relative_url }}"></script>-->
+
+    {% include google-analytics.html %}
+    {% if jekyll.environment == 'production' %}
+    {% endif %}
+</head>
