@@ -21,8 +21,8 @@ guides, so they are buggy and are based on code which is not so nice
 to look at (which does not mean that my current projects are perfectly
 free of bugs and have the nicest code - I am improving, I promise!).
 
-At the moment, I am working for LogMeIn in Karlsruhe as intern in
-software development and doing my bachelor thesis at the Fraunhofer
+At the moment, I am working for LogMeIn in Karlsruhe as a working student in
+software development last year I have done my bachelor thesis at the Fraunhofer
 IOSB.
 
 I have also held a class called "Basic Notions of Computer Science" 
