@@ -29,5 +29,3 @@ invoke it from there:
 
     $ npm i -g pdfjoin
     $ pdfjoin
-
-![PDFJoin usage demo](./pdfjoiner-demo.gif "PDFJoin usage demo")
